@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
-using System.Text;
 using RSI.Model;
 
 namespace RSI
@@ -35,7 +31,7 @@ namespace RSI
             }
         }
 
-        public bool AddCow(string name, CowBreed cowBreed, DateTime dateOfBirth, DateTime dateOfFertilization, string tagNumber)
+        public bool AddCow(string name, CowBreed cowBreed, DateTime dateOfBirth, DateTime dateOfCalving, string tagNumber)
         {
             try
             {
@@ -48,7 +44,7 @@ namespace RSI
                             Name = name,
                             CowBreed = cowBreed,
                             DateOfBirth = dateOfBirth,
-                            DateOfFertilization = dateOfFertilization,
+                            DateOfCalving = dateOfCalving,
                             TagNumber = tagNumber
                         });
                         context.SaveChanges();
@@ -89,7 +85,7 @@ namespace RSI
             }
         }
 
-        public bool UpdateCow(int id, string name, CowBreed cowBreed, DateTime dateOfBirth, DateTime dateOfFertilization, string tagNumber)
+        public bool UpdateCow(int id, string name, CowBreed cowBreed, DateTime dateOfBirth, DateTime dateOfCalving, string tagNumber)
         {
             try
             {
@@ -102,7 +98,7 @@ namespace RSI
                         currentCow.Name = name;
                         currentCow.CowBreed = cowBreed;
                         currentCow.DateOfBirth = dateOfBirth;
-                        currentCow.DateOfFertilization = dateOfFertilization;
+                        currentCow.DateOfCalving = dateOfCalving;
                         currentCow.TagNumber = tagNumber;
 
                         context.SaveChanges();
@@ -115,6 +111,25 @@ namespace RSI
             catch (Exception ex)
             {
                 throw new Exception("Cannot update cow.", ex);
+            }
+        }
+
+        public IList<Cow> GetCowsNearToCalving()
+        {
+            try
+            {
+                using (var context = new RmiContext())
+                {
+                    var dateFrom = DateTime.Now.AddDays(-14);
+                    var dateTo = DateTime.Now.AddDays(14);
+                    var cows = context.Cows.Where(x =>
+                        x.DateOfCalving >= dateFrom && x.DateOfCalving <= dateTo).ToList();
+                    return cows;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Cannot get cows.", ex);
             }
         }
 

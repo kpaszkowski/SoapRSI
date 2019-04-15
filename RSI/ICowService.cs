@@ -15,13 +15,16 @@ namespace RSI
         Cow GetCowInfo(int id);
 
         [OperationContract]
-        bool AddCow(string name, CowBreed cowBreed, DateTime dateOfBirth, DateTime dateOfFertilization, string tagNumber);
+        bool AddCow(string name, CowBreed cowBreed, DateTime dateOfBirth, DateTime dateOfCalving, string tagNumber);
 
         [OperationContract]
         bool RemoveCow(int id);
 
         [OperationContract]
-        bool UpdateCow(int id, string name, CowBreed cowBreed, DateTime dateOfBirth, DateTime dateOfFertilization, string tagNumber);
+        bool UpdateCow(int id, string name, CowBreed cowBreed, DateTime dateOfBirth, DateTime dateOfCalving, string tagNumber);
+
+        [OperationContract]
+        IList<Cow> GetCowsNearToCalving();
 
     }
 }

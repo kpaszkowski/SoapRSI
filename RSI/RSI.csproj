@@ -82,6 +82,10 @@
     <Compile Include="Migrations\201904141937161_changeModels.Designer.cs">
       <DependentUpon>201904141937161_changeModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904151426324_changeModelColumn.cs" />
+    <Compile Include="Migrations\201904151426324_changeModelColumn.Designer.cs">
+      <DependentUpon>201904151426324_changeModelColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\RmiContext.cs" />
     <Compile Include="Model\Cow.cs" />
@@ -109,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904141937161_changeModels.resx">
       <DependentUpon>201904141937161_changeModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904151426324_changeModelColumn.resx">
+      <DependentUpon>201904151426324_changeModelColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

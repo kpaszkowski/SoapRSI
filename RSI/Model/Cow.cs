@@ -24,7 +24,7 @@ namespace RSI.Model
         public DateTime DateOfBirth { get; set; }
 
         [DataMember]
-        public DateTime DateOfFertilization { get; set; }
+        public DateTime DateOfCalving { get; set; }
 
         [DataMember]
         public string TagNumber { get; set; }
