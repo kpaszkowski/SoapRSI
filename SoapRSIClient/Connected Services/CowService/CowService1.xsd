@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RSI.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RSI.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:61151/CowService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/RSI" />
+  <xs:complexType name="ArrayOfCow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cow" nillable="true" type="tns:Cow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCow" nillable="true" type="tns:ArrayOfCow" />
+  <xs:complexType name="Cow">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/RSI" minOccurs="0" name="CowBreed" type="q1:CowBreed" />
+      <xs:element minOccurs="0" name="DateOfBirth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateOfCalving" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TagNumber" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Cow" nillable="true" type="tns:Cow" />
+</xs:schema>

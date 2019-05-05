@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CowService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61151/CowService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61151/CowService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61151/CowService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/RSI.Model" />
+      <xsd:import schemaLocation="http://localhost:61151/CowService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/RSI" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICowService_GetAllCows_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCows" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_GetAllCows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_GetCowInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCowInfo" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_GetCowInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCowInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_AddCow_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCow" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_AddCow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_RemoveCow_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCow" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_RemoveCow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_UpdateCow_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCow" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_UpdateCow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_GetCowsNearToCalving_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCowsNearToCalving" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_GetCowsNearToCalving_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCowsNearToCalvingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_GetCowsNearToDryOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCowsNearToDryOff" />
+  </wsdl:message>
+  <wsdl:message name="ICowService_GetCowsNearToDryOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCowsNearToDryOffResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICowService">
+    <wsdl:operation name="GetAllCows">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICowService/GetAllCows" message="tns:ICowService_GetAllCows_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICowService/GetAllCowsResponse" message="tns:ICowService_GetAllCows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCowInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICowService/GetCowInfo" message="tns:ICowService_GetCowInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICowService/GetCowInfoResponse" message="tns:ICowService_GetCowInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCow">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICowService/AddCow" message="tns:ICowService_AddCow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICowService/AddCowResponse" message="tns:ICowService_AddCow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCow">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICowService/RemoveCow" message="tns:ICowService_RemoveCow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICowService/RemoveCowResponse" message="tns:ICowService_RemoveCow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCow">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICowService/UpdateCow" message="tns:ICowService_UpdateCow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICowService/UpdateCowResponse" message="tns:ICowService_UpdateCow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCowsNearToCalving">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICowService/GetCowsNearToCalving" message="tns:ICowService_GetCowsNearToCalving_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICowService/GetCowsNearToCalvingResponse" message="tns:ICowService_GetCowsNearToCalving_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCowsNearToDryOff">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICowService/GetCowsNearToDryOff" message="tns:ICowService_GetCowsNearToDryOff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICowService/GetCowsNearToDryOffResponse" message="tns:ICowService_GetCowsNearToDryOff_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICowService" type="tns:ICowService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllCows">
+      <soap:operation soapAction="http://tempuri.org/ICowService/GetAllCows" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCowInfo">
+      <soap:operation soapAction="http://tempuri.org/ICowService/GetCowInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCow">
+      <soap:operation soapAction="http://tempuri.org/ICowService/AddCow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCow">
+      <soap:operation soapAction="http://tempuri.org/ICowService/RemoveCow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCow">
+      <soap:operation soapAction="http://tempuri.org/ICowService/UpdateCow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCowsNearToCalving">
+      <soap:operation soapAction="http://tempuri.org/ICowService/GetCowsNearToCalving" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCowsNearToDryOff">
+      <soap:operation soapAction="http://tempuri.org/ICowService/GetCowsNearToDryOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CowService">
+    <wsdl:port name="BasicHttpBinding_ICowService" binding="tns:BasicHttpBinding_ICowService">
+      <soap:address location="http://localhost:61151/CowService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

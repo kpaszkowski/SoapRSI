@@ -26,5 +26,8 @@ namespace RSI
         [OperationContract]
         IList<Cow> GetCowsNearToCalving();
 
+        [OperationContract]
+        IList<Cow> GetCowsNearToDryOff();
+
     }
 }

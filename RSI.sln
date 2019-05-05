@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSI", "RSI\RSI.csproj", "{F1944FAB-E3B6-4B19-8669-27D8E774FBE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{9268ADED-215E-46B8-9A60-F86D3E83F0E4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F1944FAB-E3B6-4B19-8669-27D8E774FBE2} = {F1944FAB-E3B6-4B19-8669-27D8E774FBE2}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{F1944FAB-E3B6-4B19-8669-27D8E774FBE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1944FAB-E3B6-4B19-8669-27D8E774FBE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1944FAB-E3B6-4B19-8669-27D8E774FBE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9268ADED-215E-46B8-9A60-F86D3E83F0E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9268ADED-215E-46B8-9A60-F86D3E83F0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9268ADED-215E-46B8-9A60-F86D3E83F0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9268ADED-215E-46B8-9A60-F86D3E83F0E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="78a36343-bf97-42ac-b524-a3bb5adeee6b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61151/CowService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CowService.xsd" MetadataType="Schema" ID="69be7736-6eab-4750-8bf5-1445b18d9d01" SourceId="1" SourceUrl="http://localhost:61151/CowService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CowService1.xsd" MetadataType="Schema" ID="8d7c2ef9-a221-4ed6-86db-b6a507823da8" SourceId="1" SourceUrl="http://localhost:61151/CowService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CowService2.xsd" MetadataType="Schema" ID="d604cd73-6f3f-4520-9e40-59a6a86503b3" SourceId="1" SourceUrl="http://localhost:61151/CowService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CowService3.xsd" MetadataType="Schema" ID="4f6731f5-c1f1-4c49-8bcd-f07b39f4ac6f" SourceId="1" SourceUrl="http://localhost:61151/CowService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CowService.wsdl" MetadataType="Wsdl" ID="55d58195-89d3-4b2c-a594-8e74d55286e3" SourceId="1" SourceUrl="http://localhost:61151/CowService.svc?wsdl" />
+    <MetadataFile FileName="CowService.disco" MetadataType="Disco" ID="ad1f2052-f1c5-4e41-810a-af63f95bfcb2" SourceId="1" SourceUrl="http://localhost:61151/CowService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

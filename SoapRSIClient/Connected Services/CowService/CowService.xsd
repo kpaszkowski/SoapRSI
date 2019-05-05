@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/RSI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RSI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="CowBreed">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Charolaise" />
+      <xs:enumeration value="Wagyu" />
+      <xs:enumeration value="Uckermärker" />
+      <xs:enumeration value="Angus" />
+      <xs:enumeration value="WelshBlack" />
+      <xs:enumeration value="Hereford" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CowBreed" nillable="true" type="tns:CowBreed" />
+</xs:schema>
