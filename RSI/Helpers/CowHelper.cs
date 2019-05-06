@@ -65,14 +65,9 @@ namespace RSI.Helpers
                 using (RmiContext context = new RmiContext())
                 {
                     Cow currentCow = context.Cows.FirstOrDefault(x => x.Id == id);
-
-                    if (currentCow != null)
-                    {
-                        context.Cows.Remove(currentCow);
-                        context.SaveChanges();
-                        return true;
-                    }
-                    return false;
+                    context.Cows.Remove(currentCow);
+                    context.SaveChanges();
+                    return true;
                 }
 
             }

@@ -6,6 +6,7 @@ using RSI.Model;
 
 namespace RSI
 {
+    [GlobalErrorBehaviorAttribute(typeof(GlobalErrorHandler))]
     public class CowService : ICowService
     {
         public IList<Cow> Cows { get; set; }

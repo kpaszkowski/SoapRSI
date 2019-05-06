@@ -77,6 +77,8 @@
   <ItemGroup>
     <Compile Include="CowBreed.cs" />
     <Compile Include="Extension.cs" />
+    <Compile Include="GlobalErrorBehaviorAttribute.cs" />
+    <Compile Include="GlobalErrorHandler.cs" />
     <Compile Include="Helpers\CowHelper.cs" />
     <Compile Include="Migrations\201904012016291_InitialCreate.cs" />
     <Compile Include="Migrations\201904012016291_InitialCreate.Designer.cs">
