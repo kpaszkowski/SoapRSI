@@ -30,7 +30,7 @@ namespace Client
             this.UpdateId = id;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void UpdateButtonClick(object sender, RoutedEventArgs e)
         {
             this.CowServiceClient.UpdateCow(UpdateId, Name.Text, (CowBreed)Enum.Parse(typeof(CowBreed), CowBread.Text),
                 DateTime.Parse(birth.Text), DateTime.Parse(calving.Text), TagNumber.Text);

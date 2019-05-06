@@ -5,12 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Button Content="Get all cows" Click="GetAllCowsButtonClick"></Button>
-        <Button Content="Get calving cows" Click="GetCalvingCowsButtonClick"></Button>
-        <Button Content="Get dry off cows" Click="GetDryOffCowsButtonClick"></Button>
-        <Button Content="Add cow" Click="AddCowButtonClick"></Button>
-        <Button Content="Export as PDF" Click="GetPdfButtonClick"></Button>
-    </StackPanel>
+   WindowStartupLocation="CenterScreen"
+        Title="iCow - Main Menu" Height="450" Width="500" MinHeight="400" MinWidth="500" Background="#73e573">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="12*"></RowDefinition>
+            <RowDefinition Height="12*"></RowDefinition>
+            <RowDefinition Height="12*"></RowDefinition>
+            <RowDefinition Height="12*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="234*"></ColumnDefinition>
+            <ColumnDefinition Width="234*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock  FontSize="48" FontWeight="Bold" FontFamily="Corbel" HorizontalAlignment="Center" VerticalAlignment="Top" Height="59" Width="107" Margin="0" Grid.ColumnSpan="2">iCow</TextBlock>
+        <TextBlock  FontSize="32" FontWeight="Bold" FontFamily="Corbel" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="39" Width="156" Margin="0,0,0,1" Grid.ColumnSpan="2">Main Menu</TextBlock>
+        <Button Content="All"  Grid.Row="1" VerticalAlignment="Center" Style="{StaticResource RoundedButtonStyle}"  Background="#FFCBFFC9" Width="200" Height="80" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Click="GetAllCowsButtonClick"/>
+        <Button Content="Dry off"  Grid.Row="2" VerticalAlignment="Center" Style="{StaticResource RoundedButtonStyle}"  Background="#FFCBFFC9" Width="200" Height="80" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Click="GetCalvingCowsButtonClick"/>
+        <Button Content="Calving"  Grid.Row="3" VerticalAlignment="Center" Style="{StaticResource RoundedButtonStyle}"  Background="#FFCBFFC9" Width="200" Height="80" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Click="GetDryOffCowsButtonClick"/>
+        <Button Content="Add"  Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Style="{StaticResource RoundedButtonStyle}"  Background="#FFCBFFC9" Width="200" Height="80" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Click="AddCowButtonClick"/>
+        <Button Content="PDF"  Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Style="{StaticResource RoundedButtonStyle}"  Background="#FFCBFFC9" Width="200" Height="80" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Click="GetPdfButtonClick"/>
+        <Button Content="Exit"  Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Style="{StaticResource RoundedButtonStyle}"  Background="#FFCBFFC9" Width="200" Height="80" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Click="ExitButtonClick"/>
+
+    </Grid>
 </Window>

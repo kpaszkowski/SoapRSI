@@ -86,5 +86,10 @@ namespace Client
                 doc.Close();
             }
         }
+
+        private void ExitButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

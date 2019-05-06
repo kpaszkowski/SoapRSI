@@ -28,7 +28,7 @@ namespace Client
             CowBread.ItemsSource = Enum.GetValues(typeof(CowBreed)).Cast<CowBreed>();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void AddButtonClick(object sender, RoutedEventArgs e)
         {
             this.CowServiceClient.AddCow(Name.Text, (CowBreed)Enum.Parse(typeof(CowBreed), CowBread.Text),
                 DateTime.Parse(birth.Text), DateTime.Parse(calving.Text), TagNumber.Text);

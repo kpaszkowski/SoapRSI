@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="UpdateCowWindow" Height="450" Width="800">
+        WindowStartupLocation="CenterScreen"
+        Title="iCow - Update Cow" Height="350" Width="500" Background="#73e573">
     <StackPanel>
         <Label>Name</Label>
         <TextBox x:Name="Name"></TextBox>
@@ -22,6 +23,8 @@
         <Label>TagNumber</Label>
         <TextBox x:Name="TagNumber"></TextBox>
 
-        <Button Click="Button_Click">Update</Button>
+        <Label></Label>
+        <Label></Label>
+        <Button Content="Update"  Grid.Row="1" VerticalAlignment="Bottom" Style="{StaticResource RoundedButtonStyle}"  Background="#FFCBFFC9" Width="200" Height="50" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center" Click="UpdateButtonClick"/>
     </StackPanel>
 </Window>

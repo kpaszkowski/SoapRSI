@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Client"
         mc:Ignorable="d"
-        Title="DisplayWindow" Height="450" Width="800">
-    <StackPanel>
-        <Label HorizontalAlignment="Center">All Cows</Label>
-        <DataGrid x:Name="CowsGrid" IsReadOnly="True" AutoGenerateColumns="False"   >
-            <DataGrid.Columns>
+        WindowStartupLocation="CenterScreen"
+        Title="iCow - Cows List" Height="450" Width="700"  Background="#73e573">
+    <StackPanel >
+        <Label HorizontalAlignment="Center">Cows List</Label>
+        <DataGrid x:Name="CowsGrid" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns >
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -18,8 +19,8 @@
                                     <ColumnDefinition Width="25*"/>
                                     <ColumnDefinition Width="25*"/>
                                 </Grid.ColumnDefinitions>
-                                <Button Content="Remove" Grid.Column="0" Background="White" BorderThickness="1" Click="RemoveCowClick"></Button>
-                                <Button Content="Update" Grid.Column="1" Background="White" BorderThickness="1" Click="UpdateCowClick"></Button>
+                                <Button Content="Remove" Grid.Column="0" Background="#FFCBFFC9" BorderThickness="1" Click="RemoveCowClick"></Button>
+                                <Button Content="Update" Grid.Column="1" Background="#FFCBFFC9" BorderThickness="1" Click="UpdateCowClick"></Button>
                             </Grid>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

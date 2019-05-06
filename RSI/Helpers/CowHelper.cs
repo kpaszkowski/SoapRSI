@@ -136,8 +136,8 @@ namespace RSI.Helpers
             {
                 using (var context = new RmiContext())
                 {
-                    var dateFrom = DateTime.Now.AddMonths(-2).AddDays(-14);
-                    var dateTo = DateTime.Now.AddMonths(-2).AddDays(14);
+                    var dateFrom = DateTime.Now.AddMonths(2).AddDays(-14);
+                    var dateTo = DateTime.Now.AddMonths(2).AddDays(14);
                     var cows = context.Cows.Where(x =>
                         x.DateOfCalving >= dateFrom && x.DateOfCalving <= dateTo).ToList();
                     return cows;
